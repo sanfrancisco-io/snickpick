@@ -1,0 +1,81 @@
+@import '../../index.scss';
+
+.create_wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  align-items: center;
+  @media screen and (max-width: $laptops-devices) {
+    display: block;
+    &__leftside {
+      margin-bottom: 50px;
+    }
+    &__rightside {
+      img {
+        width: 500px;
+        height: 400px;
+      }
+    }
+  }
+  @media screen and (max-width: $tablet-devices) {
+    &__rightside {
+      img {
+        width: 400px;
+        height: 300px;
+      }
+    }
+  }
+  @media screen and (max-width: $mobile-devices) {
+    &__rightside {
+      img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  }
+  &__leftside {
+    &__first_floor {
+      @include section_title;
+    }
+    &__second_floor {
+      font-size: 18px;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+      color: #677487;
+      margin-bottom: 32px;
+    }
+    &__third_floor {
+      &__title {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        color: #677487;
+        margin-bottom: 10px;
+      }
+      &__wrapper {
+        &_children {
+          margin-right: 30px;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: 'Poppins', sans-serif;
+          position: relative;
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 120%;
+            bottom: 5px;
+            background-color: #1d2736;
+            opacity: 0.1;
+            width: 1px;
+            height: 16px;
+          }
+        }
+      }
+    }
+    &__fourth_floor {
+      &_button {
+        margin-top: 50px;
+        @include button;
+      }
+    }
+  }
+}

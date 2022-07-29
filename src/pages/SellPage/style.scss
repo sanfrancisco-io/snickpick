@@ -1,0 +1,56 @@
+@import '../../index.scss';
+
+@mixin sellPageTextMixin {
+  color: #677487;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.sellpage_wrapper {
+  background: #f9f7fc;
+  padding: 140px 100px;
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 100px;
+  position: relative;
+  &__leftside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    &__first_floor {
+      @include section_title;
+    }
+    &__second_floor {
+      @include sellPageTextMixin;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 70%;
+      left: 50%;
+      top: 15%;
+      background-color: #000;
+      opacity: 0.1;
+    }
+  }
+  &__rightside {
+    width: 50%;
+    &__arrow_section {
+      margin-bottom: 60px;
+    }
+    &__second_floor {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      margin-top: 14px;
+    }
+    &__third_floor {
+      @include sellPageTextMixin;
+      margin-top: 16px;
+    }
+  }
+}

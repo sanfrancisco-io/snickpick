@@ -1,0 +1,15 @@
+.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before,
+.ant-tabs-top > div > .ant-tabs-nav::before,
+.ant-tabs-bottom > div > .ant-tabs-nav::before {
+  border: 0 !important;
+}
+
+.ant-tabs-ink-bar {
+  position: absolute;
+  background: #f0998d !important;
+  pointer-events: none;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #363636 !important;
+}

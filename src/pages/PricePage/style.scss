@@ -1,0 +1,42 @@
+@import '../../index.scss';
+
+@mixin priceTags {
+  padding: 10px;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  white-space: nowrap;
+  margin-right: 16px;
+}
+
+.pricepage_wrapper {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+  &__leftside {
+    width: 40%;
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    flex-direction: column;
+    &__title {
+      @include section_title;
+      margin-bottom: 50px;
+    }
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 70px;
+      &_children {
+        @include priceTags;
+      }
+    }
+    &__button {
+      button {
+        margin-top: 40px;
+        @include button;
+      }
+    }
+  }
+}

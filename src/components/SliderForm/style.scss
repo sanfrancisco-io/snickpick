@@ -1,0 +1,53 @@
+@import '../../index.scss';
+
+.sliderform_wrapper {
+  z-index: 10;
+  padding: 140px 50px;
+  margin: 0 100px;
+  border-radius: 20px;
+  background-color: #fff;
+  &__header {
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 75px;
+    &_lastchild {
+      @include last_child;
+    }
+  }
+  &__main_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+}
+
+.label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.input {
+  margin-top: 16px;
+  height: 80px;
+  background: #f7f9fd;
+  border: 1px solid #dfe8fa;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-indent: 15px;
+  width: 100%;
+}
+
+.button_wrapper {
+  .send_form__button {
+    @include button;
+  }
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
